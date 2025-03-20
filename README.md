@@ -1,4 +1,4 @@
-# RoboScan_Auto_Tracker_Collect
+# RoboScanAutoTrackerCollect
 本仓库用于 RoboScan 项目中三轴标定算法的自动数据采集。使用的机械臂为 Aubo i10，使用的跟踪仪为 Leica AT500。
 
 ## 目录
