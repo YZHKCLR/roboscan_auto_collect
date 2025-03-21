@@ -32,20 +32,20 @@
 - MoveIt!
 
 ### 安装步骤
-1.建立工作空间
-2.根据参考文献中aubo_ros_driver 官方文档，仅安装所需要的依赖项
-3.将本仓库提供的软件包拷贝到工作空间的src文件夹下面
-4.将aubo_python_control下面的所有so文件全部放到python3的路径下,保证运行python3时能够找到
+1.建立工作空间<br>
+2.根据参考文献中aubo_ros_driver 官方文档，仅安装所需要的依赖项<br>
+3.将本仓库提供的软件包拷贝到工作空间的src文件夹下面<br>
+4.将aubo_python_control下面的所有so文件全部放到python3的路径下,保证运行python3时能够找到<br>
 
 
 ### 使用
-在terminal依次运行以下命令
-roslaunch aubo_gazebo aubo_bringup.launch robot_model:=aubo_i10
-roslaunch aubo_moveit_config moveit_planning_execution.launch sim:=true robot_model:=aubo_i10
-roslaunch aubo_moveit_config moveit_rviz.launch (可有可无,并不重要,除非想看仿真中自动采集时的原理)
-rosrun roboscan_auto_collect test_leica_cmd_client
-等待windows上leica程序启动后运行
-python3 test_auto_collect_marker.py
+在terminal依次运行以下命令<br>
+roslaunch aubo_gazebo aubo_bringup.launch<br> robot_model:=aubo_i10<br>
+roslaunch aubo_moveit_config moveit_planning_execution.launch sim:=true robot_model:=aubo_i10<br>
+roslaunch aubo_moveit_config moveit_rviz.launch (可有可无,并不重要,除非想看仿真中自动采集时的原理)<br>
+rosrun roboscan_auto_collect test_leica_cmd_client<br>
+等待windows上leica程序启动后运行<br>
+python3 test_auto_collect_marker.py<br>
 
 
 ## 许可证
