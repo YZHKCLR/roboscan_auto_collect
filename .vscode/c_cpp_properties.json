@@ -1,0 +1,26 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/yz/catkin_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/yz/catkin_ws/src/aubo_ros_driver/aubo_robot_driver/include/**",
+        "/home/yz/catkin_ws/src/roboscan_auto_collect/include/**",
+        "/home/yz/catkin_ws/src/Universal_Robots_ROS_Driver/ur_calibration/include/**",
+        "/home/yz/catkin_ws/src/universal_robot/ur_kinematics/include/**",
+        "/home/yz/catkin_ws/src/Universal_Robots_ROS_Driver/ur_robot_driver/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

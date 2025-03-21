@@ -1,0 +1,36 @@
+<launch>
+    <!-- 定义参数 -->
+    <arg name="robot_model_param" default="aubo_i10" />
+    <arg name="sim_param" default="true" />
+
+    <!-- 发送指令给leica的TCP client,並接收leica实际位置 -->
+    <node pkg="roboscan_auto_collect" type="test_leica_cmd_client.py" name="test_leica_cmd_client_node">
+    </node>
+ 
+
+    <!-- 加载第一个 launch 文件 -->
+    <include file="$(find aubo_gazebo)/launch/aubo_bringup.launch" >
+    <arg name="robot_model" value="$(arg robot_model_param)" />
+    </include>
+
+    <!-- 加载第二个 launch 文件，依赖于第一个 -->
+    <include file="$(find aubo_moveit_config)/launch/moveit_planning_execution.launch" depends="aubo_bringup.launch" >
+    
+    <arg name="robot_model" value="$(arg robot_model_param)" />
+    <arg name="sim" value="$(arg sim_param)" />
+    </include>
+
+    <!-- 加载第三个 launch 文件，依赖于第二个 -->
+    <!--include file="$(find aubo_moveit_config)/launch/moveit_rviz.launch" depends="moveit_planning_execution.launch" /-->
+
+    <!-- 加载自动采集标定数据算法节点 -->
+    <!--node pkg="roboscan_auto_collect" type="test_auto_collect_marker.py" name="test_auto_collect_marker_node">
+    </node-->
+
+
+    <!-- 加载自动采集标定数据算法节点 -->
+    <!--node pkg="roboscan_auto_collect" type="test_auto_collect_marker.py" name="test_auto_collect_marker_node">
+    </node-->
+
+
+</launch>
