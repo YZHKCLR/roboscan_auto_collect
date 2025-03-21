@@ -1,0 +1,15 @@
+# variables in auto_collect_marker
+Pos_marker_tip_init: [0.0, 0.1, 0.03]                        # init value of marker in tip coordinate frame of the robot, i.e. 'est_6p' unit: m, has been intialize by hand calibration
+Att_marker_tip_init: [0.0, 0.0, 0.0]                          # init euler pose of marker in tip coordinate frame of the robot, unit: rad
+Pos_tracker_base_init: [2.79517811, 0.60087883, 0.42602183]                        # coarse init value of tracker in base coordinate frame of the robot, unit: m
+Att_tracker_base_init: [0.00515638,  0.00257131, -1.97156677]                                 # init pose of tracker in base coordinate frame of the robot, unit: m
+Group_num_joints: [1,1,1]                                   # group number in joint frame (J1,J2,J3) of the robot. Default: [14,6,13] 
+Group_step_joints: [0.2,0.4,0.2]                              # group step in joint frame of the robot, all set 0.2. unit: rad.Default: [0.2,0.4,0.2] 
+Num_each_group: 20                                             # number of points in each group
+Group_start_joints: [0.4,-1, 1.2]                          # start joints of all groups in joint space of the robot, least value in each group, unit: rad, default:[-1.0,-1.4, 0.0]  
+Manipulator_type: 1                                           # manipulator type: 1 for Aubo i10, 
+Tracker_type: 1                                               # tracker type: 1 for Leika
+Marker_line_angle_thresh: 0.1                                 # threshold between marker and line, unit rad. 0.1 rad correspond to 5.73 degree
+Delta: 0.1                                                    # distance theshold between two joint vectors in each collecting group
+Move_type: 1                                                  # default 0: move_track, 1 :joint_move. 目前0有些問題
+Group_start_idx: 1                                              #group start index,at least 1

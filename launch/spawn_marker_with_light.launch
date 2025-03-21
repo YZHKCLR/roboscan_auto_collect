@@ -1,0 +1,11 @@
+<launch>
+  <!-- Load the URDF into the ROS Parameter Server -->
+  <param name="robot_description" command="cat $(find roboscan_auto_collect)/urdf/marker_with_light.urdf"/>
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" default="worlds/empty.world"/>
+  </include>
+  <!-- Spawn the robot in Gazebo -->
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model marker_with_light -z 0.0" respawn="false" output="screen" />
+</launch>
