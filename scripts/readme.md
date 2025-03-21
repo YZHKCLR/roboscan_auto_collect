@@ -9,19 +9,6 @@ rosrun roboscan_auto_collect test_leica_cmd_client.py
 python3 test_auto_collect_marker.py
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 Notes:
 test_move_aubo.py: move the aubo robot in gazebo based on Moveit
 test_move_aubo_topic.py: move the aubo robot in gazebo based on topic
